@@ -3,29 +3,26 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = "file:./dev.db"
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 model User {
-  id     Int    @id @default(autoincrement())
-  nome   String
-  email  String @unique
-  senha  String
-  cidade String
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  createdAt DateTime @default(now())
 
-  items  Item[]
+  products Product[]
 }
 
-model Item {
-  id        Int    @id @default(autoincrement())
-  titulo    String
-  descricao String
-  categoria String
-  tipo      String
-  cidade    String
-  imagem    String?
+model Product {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  category    String
+  createdAt   DateTime @default(now())
 
-  usuarioId Int
-  usuario   User @relation(fields: [usuarioId], references: [id])
+  ownerId Int
+  owner   User @relation(fields: [ownerId], references: [id])
 }
