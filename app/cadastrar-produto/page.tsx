@@ -13,7 +13,6 @@ async function criarProduto(formData: FormData) {
             title,
             description,
             category,
-            ownerId: 1, 
         },
     });
 

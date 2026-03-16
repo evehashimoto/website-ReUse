@@ -4,8 +4,14 @@ export default async function Home() {
   const products = await prisma.product.findMany();
 
   return (
-    <main style={{ padding: "40px", fontFamily: "sans-serif" }}>
-      <h1>Produtos disponíveis</h1>
+    <main style={{ padding: "40px", fontFamily: "sans-serif"}}>
+      <h1 className="text-3xl font-bold mb-3" >
+        ReUse! 
+      </h1>
+      <h2 className="text-2xl font-medium mb-6">Plataforma de Troca de Itens</h2>
+      <p className="mb-8 text-gray-600">
+        Cadastre itens que você não usa mais e encontre oportunidades de troca.
+      </p>
 
       <a href="/cadastrar-produto">Cadastrar novo produto</a>
 
@@ -13,7 +19,7 @@ export default async function Home() {
         style={{
           marginTop: "30px",
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))",
+          gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
           gap: "20px",
         }}
       >
@@ -22,9 +28,9 @@ export default async function Home() {
             key={product.id}
             href={`/produtos/${product.id}`}
             style={{
-              border: "1px solid #ddd",
+              border: "2px solid #a8a8a8",
               borderRadius: "10px",
-              padding: "15px",
+              padding: "20px",
               textDecoration: "none",
               color: "black",
               background: "white",
