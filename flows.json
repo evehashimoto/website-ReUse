@@ -1,0 +1,677 @@
+[
+    {
+        "id": "08fc47ca992abf94",
+        "type": "tab",
+        "label": "Gerenciamento",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c43337dd9cfb0445",
+        "type": "tab",
+        "label": "Deletar Produto",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "bf70ac45e737b108",
+        "type": "tab",
+        "label": "Listar Produto",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "6717dc381a8755f7",
+        "type": "tab",
+        "label": "Criar Produto",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4ed03bb81e0c66af",
+        "type": "ui_tab",
+        "name": "Painel ReUse",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d58210bb46442184",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "43a22c6e60dd5aa5",
+        "type": "ui_group",
+        "name": "Gerenciar Produtos",
+        "tab": "4ed03bb81e0c66af",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "13f07a46479f582f",
+        "type": "ui_button",
+        "z": "08fc47ca992abf94",
+        "name": "",
+        "group": "43a22c6e60dd5aa5",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Listar Produtos",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 140,
+        "y": 100,
+        "wires": [
+            [
+                "7aac3bc65ac2fb97"
+            ]
+        ]
+    },
+    {
+        "id": "7aac3bc65ac2fb97",
+        "type": "http request",
+        "z": "08fc47ca992abf94",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:3000/api/products",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 320,
+        "y": 100,
+        "wires": [
+            [
+                "88675b5313fe14db"
+            ]
+        ]
+    },
+    {
+        "id": "88675b5313fe14db",
+        "type": "debug",
+        "z": "08fc47ca992abf94",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "be14b95b55c59aef",
+        "type": "ui_form",
+        "z": "08fc47ca992abf94",
+        "name": "",
+        "label": "Criar produto",
+        "group": "43a22c6e60dd5aa5",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Título",
+                "value": "title",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Descrição",
+                "value": "description",
+                "type": "text",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "Categoria",
+                "value": "category",
+                "type": "text",
+                "required": false,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "title": "",
+            "description": "",
+            "category": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 150,
+        "y": 200,
+        "wires": [
+            [
+                "7a29d141de839ab4"
+            ]
+        ]
+    },
+    {
+        "id": "7a29d141de839ab4",
+        "type": "http request",
+        "z": "08fc47ca992abf94",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:3000/api/products",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 340,
+        "y": 200,
+        "wires": [
+            [
+                "aa7d62d65d1a844c"
+            ]
+        ]
+    },
+    {
+        "id": "aa7d62d65d1a844c",
+        "type": "debug",
+        "z": "08fc47ca992abf94",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "bf0f4c51a8c85c1f",
+        "type": "ui_text_input",
+        "z": "08fc47ca992abf94",
+        "name": "id",
+        "label": "ID do Produto para Deletar",
+        "tooltip": "",
+        "group": "43a22c6e60dd5aa5",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 110,
+        "y": 280,
+        "wires": [
+            [
+                "55b004cca3bf4a57",
+                "38529a3b09d8831b",
+                "67a455cdd8591d93"
+            ]
+        ]
+    },
+    {
+        "id": "55b004cca3bf4a57",
+        "type": "ui_button",
+        "z": "08fc47ca992abf94",
+        "name": "",
+        "group": "43a22c6e60dd5aa5",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Deletar Produto",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 300,
+        "y": 280,
+        "wires": [
+            [
+                "67a455cdd8591d93"
+            ]
+        ]
+    },
+    {
+        "id": "67a455cdd8591d93",
+        "type": "function",
+        "z": "08fc47ca992abf94",
+        "name": "Montar URL DELETE",
+        "func": "msg.method = \"DELETE\";\n\n\nconst id = msg.payload;\n\n\nmsg.url = \"http://127.0.0.1:3000/api/products/\" + id;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 280,
+        "wires": [
+            [
+                "88abd2df37ba7466"
+            ]
+        ]
+    },
+    {
+        "id": "88abd2df37ba7466",
+        "type": "http request",
+        "z": "08fc47ca992abf94",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 740,
+        "y": 280,
+        "wires": [
+            [
+                "7e1c482f8add7c90"
+            ]
+        ]
+    },
+    {
+        "id": "7e1c482f8add7c90",
+        "type": "debug",
+        "z": "08fc47ca992abf94",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "38529a3b09d8831b",
+        "type": "debug",
+        "z": "08fc47ca992abf94",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 240,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "285168fb477fbbc3",
+        "type": "inject",
+        "z": "c43337dd9cfb0445",
+        "name": "Deletar Produto 9",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 140,
+        "wires": [
+            [
+                "bb5a4435b0dc3c9e"
+            ]
+        ]
+    },
+    {
+        "id": "bb5a4435b0dc3c9e",
+        "type": "http request",
+        "z": "c43337dd9cfb0445",
+        "name": "",
+        "method": "DELETE",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://localhost:3000/api/products/9",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 340,
+        "y": 140,
+        "wires": [
+            [
+                "be38da370f128227"
+            ]
+        ]
+    },
+    {
+        "id": "be38da370f128227",
+        "type": "debug",
+        "z": "c43337dd9cfb0445",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "8d50a8776ac6501a",
+        "type": "inject",
+        "z": "bf70ac45e737b108",
+        "name": "Listar Produtos",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 140,
+        "wires": [
+            [
+                "48c72322f9f88c7e"
+            ]
+        ]
+    },
+    {
+        "id": "48c72322f9f88c7e",
+        "type": "http request",
+        "z": "bf70ac45e737b108",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:3000/api/products",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 400,
+        "y": 140,
+        "wires": [
+            [
+                "9a2b5f03b3ea7916"
+            ]
+        ]
+    },
+    {
+        "id": "9a2b5f03b3ea7916",
+        "type": "debug",
+        "z": "bf70ac45e737b108",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "15baee710658d581",
+        "type": "inject",
+        "z": "6717dc381a8755f7",
+        "name": "Criar Produto Teste",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 140,
+        "wires": [
+            [
+                "fa922c0dca2d05fc"
+            ]
+        ]
+    },
+    {
+        "id": "fa922c0dca2d05fc",
+        "type": "function",
+        "z": "6717dc381a8755f7",
+        "name": "Criar Dados do Produto",
+        "func": "msg.payload = {\n    title: \"Produto criado pelo Node-RED\",\n    description: \"Este produto foi criado via POST\",\n    category: \"Teste\"\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 140,
+        "wires": [
+            [
+                "a56ff34a27069e89"
+            ]
+        ]
+    },
+    {
+        "id": "a56ff34a27069e89",
+        "type": "http request",
+        "z": "6717dc381a8755f7",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:3000/api/products",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 580,
+        "y": 140,
+        "wires": [
+            [
+                "0cd0c74d3ea62110"
+            ]
+        ]
+    },
+    {
+        "id": "0cd0c74d3ea62110",
+        "type": "debug",
+        "z": "6717dc381a8755f7",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "d738e52304a9ccbc",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6"
+        }
+    }
+]
