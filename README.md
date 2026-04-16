@@ -12,7 +12,7 @@ Para rodar o projeto localmente, siga os passos abaixo:
 
 ```bash
 # Clone o repositório
-git clone <url-do-repositorio>
+git clone <https://github.com/evehashimoto/website-ReUse.git>
 
 # Acesse a pasta do projeto
 cd reuse
@@ -20,7 +20,7 @@ cd reuse
 # Instale as dependências
 npm install
 
-# Execute o projeto
+# Execute o projeto no terminal
 npm run dev
 ```
 
