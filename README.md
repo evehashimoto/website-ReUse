@@ -27,5 +27,5 @@ npm run dev
 Após isso, abra o navegador e acesse:
 
 ```
-http://localhost:3000
+http://localhost:1880/ui
 ```
