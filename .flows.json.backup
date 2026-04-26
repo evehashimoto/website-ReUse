@@ -759,7 +759,7 @@
         "z": "09ba33567dc44e35",
         "name": "",
         "method": "use",
-        "ret": "txt",
+        "ret": "obj",
         "paytoqs": "ignore",
         "url": "",
         "tls": "",
