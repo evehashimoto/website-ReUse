@@ -2,7 +2,16 @@ export const dynamic = "force-dynamic";
 
 import { prisma } from "@/lib/prisma";
 
-export default async function ProdutoPage({
+export default function ProdutoPage() {
+    return (
+        <div>
+            <h1>Produto</h1>
+            <p>Página temporariamente indisponível.</p>
+        </div>
+    );
+}
+
+/*export default async function ProdutoPage({
     params,
 }: {
     params: Promise<{ id: string }>;
@@ -32,4 +41,4 @@ export default async function ProdutoPage({
             </p>
         </main>
     );
-}
+}*/
