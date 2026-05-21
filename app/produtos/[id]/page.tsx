@@ -1,17 +1,29 @@
-export const dynamic = "force-dynamic";
-
-import { prisma } from "@/lib/prisma";
-
-export default function ProdutoPage() {
+export default function Home() {
     return (
-        <div>
-            <h1>Produto</h1>
-            <p>Página temporariamente indisponível.</p>
-        </div>
+        <main style={{ padding: "40px", fontFamily: "Arial" }}>
+            <h1>ReUse</h1>
+
+            <p>
+                Plataforma colaborativa para troca de produtos e incentivo ao consumo consciente.
+            </p>
+
+            <h2>Funcionalidades</h2>
+
+            <ul>
+                <li>Cadastro de produtos</li>
+                <li>Integração com chatbot</li>
+                <li>Automação com Watson Assistant</li>
+                <li>Integração com Supabase</li>
+            </ul>
+        </main>
     );
 }
 
-/*export default async function ProdutoPage({
+/*export const dynamic = "force-dynamic";
+
+import { prisma } from "@/lib/prisma";
+
+export default async function ProdutoPage({
     params,
 }: {
     params: Promise<{ id: string }>;
