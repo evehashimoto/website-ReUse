@@ -1,4 +1,6 @@
-import { prisma } from "@/lib/prisma";
+
+
+/*import { prisma } from "@/lib/prisma";
 import { NextResponse } from "next/server";
 
 // GET - listar produtos
@@ -21,4 +23,4 @@ export async function POST(request: Request) {
     });
 
     return NextResponse.json(newProduct);
-}
+}*/
