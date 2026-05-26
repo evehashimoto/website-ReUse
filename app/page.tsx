@@ -28,7 +28,6 @@ export default function Home() {
 
     loadProducts();
   }, []);
-
   return (
     <main style={{ padding: "40px", fontFamily: "Arial" }}>
       <h1>ReUse</h1>
