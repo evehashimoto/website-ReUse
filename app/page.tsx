@@ -13,9 +13,20 @@ export default function Home() {
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
-    fetch("/api/products")
-      .then((res) => res.json())
-      .then((data) => setProducts(data));
+    async function loadProducts() {
+      try {
+        const response = await fetch("/api/products");
+        const data = await response.json();
+
+        setProducts(data);
+      } catch (error) {
+        console.error("Erro ao carregar produtos:", error);
+
+        setProducts([]);
+      }
+    }
+
+    loadProducts();
   }, []);
 
   return (
