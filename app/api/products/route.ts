@@ -1,26 +1,22 @@
 export const runtime = "nodejs";
 
-import { prisma } from "@/lib/prisma";
 import { NextResponse } from "next/server";
 
-// GET - listar produtos
+const products = [
+    {
+        id: 1,
+        title: "Notebook Dell",
+        description: "Notebook usado em ótimo estado.",
+        category: "Tecnologia",
+    },
+    {
+        id: 2,
+        title: "Mesa Gamer",
+        description: "Mesa compacta para escritório.",
+        category: "Móveis",
+    },
+];
+
 export async function GET() {
-    const products = await prisma.product.findMany();
-
     return NextResponse.json(products);
-}
-
-// POST - criar produto
-export async function POST(request: Request) {
-    const body = await request.json();
-
-    const newProduct = await prisma.product.create({
-        data: {
-            title: body.title,
-            description: body.description,
-            category: body.category,
-        },
-    });
-
-    return NextResponse.json(newProduct);
 }
