@@ -1,62 +1,83 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import Header from "./components/Header";
 
-interface Product {
-  id: number;
-  title: string;
-  description: string;
-  category: string;
-}
+import Banner from "./components/Banner";
+
+import ProductCard from "./components/ProductCard";
+
+import Footer from "./components/Footer";
+
+const products = [
+  {
+    id: 1,
+    title: "Notebook Dell",
+    description: "Notebook usado em ótimo estado.",
+    category: "Tecnologia",
+    price: "R$ 2.300",
+    image:
+      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+  },
+  {
+    id: 2,
+    title: "Mesa Gamer",
+    description: "Mesa compacta para escritório.",
+    category: "Móveis",
+    price: "R$ 450",
+    image:
+      "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6",
+  },
+  {
+    id: 3,
+    title: "Violão",
+    description: "Violão acústico seminovo.",
+    category: "Instrumentos",
+    price: "R$ 700",
+    image:
+      "https://images.unsplash.com/photo-1510915361894-db8b60106cb1",
+  },
+];
 
 export default function Home() {
-  const [products, setProducts] = useState<Product[]>([]);
-
-  useEffect(() => {
-    async function loadProducts() {
-      try {
-        const response = await fetch("/api/products");
-        const data = await response.json();
-
-        setProducts(data);
-      } catch (error) {
-        console.error("Erro ao carregar produtos:", error);
-
-        setProducts([]);
-      }
-    }
-
-    loadProducts();
-  }, []);
   return (
-    <main style={{ padding: "40px", fontFamily: "Arial" }}>
-      <h1>ReUse</h1>
+    <>
+      <Header />
+      <main
+        style={{
+          minHeight: "100vh",
+          backgroundColor: "#f4f4f4",
+          padding: "40px",
+          fontFamily: "Arial",
+          color: "#222",
+        }}
+      >
+        <Banner />
 
-      <p>
-        Plataforma colaborativa para troca de produtos e incentivo ao consumo consciente.
-      </p>
+        <h2 style={{ marginBottom: "20px" }}>
+          Produtos disponíveis
+        </h2>
 
-      <h2>Produtos</h2>
-
-      <div style={{ marginTop: "20px" }}>
-        {products.map((product) => (
-          <div
-            key={product.id}
-            style={{
-              border: "1px solid #ccc",
-              padding: "16px",
-              borderRadius: "10px",
-              marginBottom: "12px",
-            }}
-          >
-            <h3>{product.title}</h3>
-
-            <p>{product.description}</p>
-
-            <small>{product.category}</small>
-          </div>
-        ))}
-      </div>
-    </main>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+            gap: "20px",
+          }}
+        >
+          {products.map((product) => (
+            <ProductCard
+              key={product.id}
+              id={product.id}
+              title={product.title}
+              description={product.description}
+              category={product.category}
+              price={product.price}
+              image={product.image}
+            />
+          ))}
+        </div>
+      </main>
+      <Footer />
+    </>
   );
 }
