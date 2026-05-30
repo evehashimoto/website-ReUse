@@ -20,14 +20,35 @@ export default function ProductCard({
     return (
         <div
             style={{
+                position: "relative",
                 backgroundColor: "white",
                 borderRadius: "18px",
                 overflow: "hidden",
-                boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
+                boxShadow: "0 8px 24px rgba(0,0,0,0.12)",
                 transition: "0.3s",
                 cursor: "pointer",
             }}
         >
+            {/* FAVORITO */}
+            <div
+                style={{
+                    position: "absolute",
+                    top: "12px",
+                    right: "12px",
+                    backgroundColor: "white",
+                    borderRadius: "50%",
+                    width: "40px",
+                    height: "40px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    boxShadow: "0 2px 6px rgba(0,0,0,0.15)",
+                    zIndex: 1,
+                }}
+            >
+                🤍
+            </div>
+
             {/* IMAGEM */}
             <img
                 src={image}
@@ -58,6 +79,7 @@ export default function ProductCard({
                         marginTop: "16px",
                         marginBottom: "10px",
                         fontSize: "22px",
+                        color: "#222",
                     }}
                 >
                     {title}
@@ -65,8 +87,10 @@ export default function ProductCard({
 
                 <p
                     style={{
-                        color: "#4b5563",
+                        color: "#3e4650",
                         marginBottom: "18px",
+                        minHeight: "48px",
+                        lineHeight: "1.5",
                     }}
                 >
                     {description}
@@ -78,11 +102,12 @@ export default function ProductCard({
                         display: "flex",
                         justifyContent: "space-between",
                         alignItems: "center",
+                        gap: "12px",
                     }}
                 >
                     <strong
                         style={{
-                            fontSize: "22px",
+                            fontSize: "26px",
                             color: "#15803d",
                         }}
                     >
@@ -100,7 +125,7 @@ export default function ProductCard({
                             textDecoration: "none",
                         }}
                     >
-                        Ver produto
+                        Ver detalhes →
                     </Link>
                 </div>
             </div>

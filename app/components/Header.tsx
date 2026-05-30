@@ -7,24 +7,43 @@ export default function Header() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "space-between",
-                color: "white",
+                gap: "24px",
+                flexWrap: "wrap",
             }}
         >
             {/* LOGO */}
-            <div
+            <a
+                href="/"
                 style={{
-                    fontSize: "28px",
+                    textDecoration: "none",
+                    color: "white",
+                    fontSize: "32px",
                     fontWeight: "bold",
                 }}
             >
-                ReUse ♻️
-            </div>
+                ♻️ ReUse
+            </a>
+
+            {/* BUSCA */}
+            <input
+                type="search"
+                placeholder="Buscar produtos..."
+                aria-label="Buscar produtos"
+                style={{
+                    flex: 1,
+                    minWidth: "250px",
+                    maxWidth: "500px",
+                    padding: "12px 16px",
+                    borderRadius: "10px",
+                    border: "none",
+                }}
+            />
 
             {/* MENU */}
             <nav
                 style={{
                     display: "flex",
-                    gap: "24px",
+                    gap: "20px",
                     alignItems: "center",
                 }}
             >
@@ -40,6 +59,17 @@ export default function Header() {
                 </a>
 
                 <a
+                    href="/sobre"
+                    style={{
+                        color: "white",
+                        textDecoration: "none",
+                        fontWeight: "500",
+                    }}
+                >
+                    Sobre
+                </a>
+
+                <a
                     href="/favoritos"
                     style={{
                         color: "white",
@@ -49,47 +79,39 @@ export default function Header() {
                 >
                     Favoritos
                 </a>
-
-                <a
-                    href="/cadastrar-produto"
-                    style={{
-                        color: "white",
-                        textDecoration: "none",
-                        fontWeight: "500",
-                    }}
-                >
-                    Anunciar
-                </a>
             </nav>
 
-            {/* BUSCA + LOGIN */}
+            {/* AÇÕES */}
             <div
                 style={{
                     display: "flex",
-                    gap: "16px",
+                    gap: "12px",
                     alignItems: "center",
                 }}
             >
-                <input
-                    type="text"
-                    placeholder="Buscar produtos..."
-                    style={{
-                        padding: "10px 14px",
-                        borderRadius: "8px",
-                        border: "none",
-                        width: "220px",
-                    }}
-                />
-
-                <button
+                <a
+                    href="/cadastrar-produto"
                     style={{
                         backgroundColor: "white",
                         color: "#15803d",
+                        padding: "10px 18px",
+                        borderRadius: "8px",
+                        textDecoration: "none",
+                        fontWeight: "bold",
+                    }}
+                >
+                    + Anunciar
+                </a>
+
+                <button
+                    style={{
+                        backgroundColor: "#166534",
+                        color: "white",
                         border: "none",
                         padding: "10px 18px",
                         borderRadius: "8px",
-                        fontWeight: "bold",
                         cursor: "pointer",
+                        fontWeight: "bold",
                     }}
                 >
                     Login

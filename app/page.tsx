@@ -53,8 +53,60 @@ export default function Home() {
       >
         <Banner />
 
-        <h2 style={{ marginBottom: "20px" }}>
-          Produtos disponíveis
+        <section
+          style={{
+            marginTop: "40px",
+            marginBottom: "40px",
+          }}
+        >
+          <h2
+            style={{
+              marginBottom: "20px",
+              color: "#222",
+            }}
+          >
+            Categorias Populares
+          </h2>
+
+          <div
+            style={{
+              display: "flex",
+              gap: "16px",
+              flexWrap: "wrap",
+            }}
+          >
+            {[
+              "Tecnologia",
+              "Móveis",
+              "Instrumentos",
+              "Esportes",
+              "Livros",
+            ].map((categoria) => (
+              <div
+                key={categoria}
+                style={{
+                  backgroundColor: "white",
+                  padding: "16px 24px",
+                  borderRadius: "12px",
+                  boxShadow: "0 2px 6px rgba(0,0,0,0.08)",
+                  fontWeight: "bold",
+                  color: "#222",
+                }}
+              >
+                {categoria}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <h2
+          style={{
+            marginBottom: "20px",
+            color: "#222",
+            marginTop: "20px",
+          }}
+        >
+          Produtos em Destaque
         </h2>
 
         <div
@@ -76,6 +128,42 @@ export default function Home() {
             />
           ))}
         </div>
+
+        <section
+          style={{
+            marginTop: "60px",
+          }}
+        >
+          <h2
+            style={{
+              marginBottom: "20px",
+              color: "#222",
+            }}
+          >
+            Recém Adicionados
+          </h2>
+
+          <div
+            style={{
+              backgroundColor: "white",
+              padding: "24px",
+              borderRadius: "12px",
+              boxShadow: "0 2px 6px rgba(0,0,0,0.08)",
+            }}
+          >
+            <p
+              style={{
+                color: "#444",
+                margin: 0,
+                lineHeight: "1.6",
+              }}
+            >
+              Novos produtos são adicionados diariamente pela comunidade ReUse.
+              Explore oportunidades de compra consciente e contribua para uma
+              economia mais sustentável.
+            </p>
+          </div>
+        </section>
       </main>
       <Footer />
     </>

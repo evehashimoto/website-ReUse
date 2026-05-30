@@ -16,13 +16,15 @@ export default function Banner() {
             <div style={{ flex: 1 }}>
                 <h1
                     style={{
-                        fontSize: "52px",
+                        fontSize: "clamp(36px, 6vw, 52px)",
                         color: "#166534",
                         marginBottom: "20px",
                         lineHeight: "1.1",
                     }}
                 >
-                    Dê uma nova vida aos seus produtos ♻️
+                    ReUse ♻️
+                    <br />
+                    Consumo consciente para todos
                 </h1>
 
                 <p
@@ -31,26 +33,50 @@ export default function Banner() {
                         color: "#374151",
                         marginBottom: "30px",
                         maxWidth: "600px",
+                        lineHeight: "1.6",
                     }}
                 >
-                    Compre, venda e reutilize produtos de forma sustentável.
-                    Faça parte de uma comunidade que acredita no consumo consciente.
+                    Uma plataforma colaborativa para compra, venda e reutilização de
+                    produtos usados, incentivando a sustentabilidade e reduzindo o
+                    descarte desnecessário de itens.
                 </p>
 
-                <button
+                <div
                     style={{
-                        backgroundColor: "#15803d",
-                        color: "white",
-                        border: "none",
-                        padding: "16px 28px",
-                        borderRadius: "12px",
-                        fontSize: "16px",
-                        fontWeight: "bold",
-                        cursor: "pointer",
+                        display: "flex",
+                        gap: "16px",
+                        flexWrap: "wrap",
                     }}
                 >
-                    Explorar produtos
-                </button>
+                    <a
+                        href="#produtos"
+                        style={{
+                            backgroundColor: "#15803d",
+                            color: "white",
+                            textDecoration: "none",
+                            padding: "16px 28px",
+                            borderRadius: "12px",
+                            fontWeight: "bold",
+                        }}
+                    >
+                        Explorar Produtos
+                    </a>
+
+                    <a
+                        href="/cadastrar-produto"
+                        style={{
+                            backgroundColor: "white",
+                            color: "#15803d",
+                            textDecoration: "none",
+                            padding: "16px 28px",
+                            borderRadius: "12px",
+                            fontWeight: "bold",
+                            border: "2px solid #15803d",
+                        }}
+                    >
+                        Anunciar Produto
+                    </a>
+                </div>
             </div>
 
             {/* ILUSTRAÇÃO */}
@@ -60,10 +86,24 @@ export default function Banner() {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    fontSize: "140px",
                 }}
             >
-                ♻️
+                <div
+                    style={{
+                        width: "280px",
+                        height: "280px",
+                        borderRadius: "20px",
+                        border: "3px dashed #15803d",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        color: "#166534",
+                        fontWeight: "bold",
+                        backgroundColor: "rgba(255,255,255,0.5)",
+                    }}
+                >
+                    Ilustração ReUse
+                </div>
             </div>
         </section>
     );

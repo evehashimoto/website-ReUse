@@ -21,27 +21,142 @@ async function criarProduto(formData: FormData) {
 
 export default function CadastrarProduto() {
     return (
-        <main style={{ padding: "40px", fontFamily: "sans-serif" }}>
-            <h1>Cadastrar produto</h1>
+        <main
+            style={{
+                minHeight: "100vh",
+                backgroundColor: "#f4f4f4",
+                padding: "40px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+            }}
+        >
+            <div
+                style={{
+                    backgroundColor: "white",
+                    padding: "40px",
+                    borderRadius: "16px",
+                    width: "100%",
+                    maxWidth: "600px",
+                    boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+                }}
+            >
+                <h1
+                    style={{
+                        marginBottom: "24px",
+                        color: "#15803d",
+                        textAlign: "center",
+                    }}
+                >
+                    Anunciar Produto ♻️
+                </h1>
 
-            <form action={criarProduto}>
-                <div>
-                    <label>Título</label>
-                    <input type="text" name="title" required />
-                </div>
+                <form
+                    action={criarProduto}
+                    style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "20px",
+                    }}
+                >
+                    <div>
+                        <label
+                            htmlFor="title"
+                            style={{
+                                display: "block",
+                                marginBottom: "8px",
+                                fontWeight: "bold",
+                                color: "#222",
+                            }}
+                        >
+                            Título do Produto
+                        </label>
 
-                <div>
-                    <label>Descrição</label>
-                    <textarea name="description" required />
-                </div>
+                        <input
+                            id="title"
+                            type="text"
+                            name="title"
+                            required
+                            style={{
+                                width: "100%",
+                                padding: "12px",
+                                borderRadius: "8px",
+                                border: "1px solid #ccc",
+                            }}
+                        />
+                    </div>
 
-                <div>
-                    <label>Categoria</label>
-                    <input type="text" name="category" required />
-                </div>
+                    <div>
+                        <label
+                            htmlFor="description"
+                            style={{
+                                display: "block",
+                                marginBottom: "8px",
+                                fontWeight: "bold",
+                                color: "#222",
+                            }}
+                        >
+                            Descrição
+                        </label>
 
-                <button type="submit">Cadastrar</button>
-            </form>
+                        <textarea
+                            id="description"
+                            name="description"
+                            required
+                            rows={5}
+                            style={{
+                                width: "100%",
+                                padding: "12px",
+                                borderRadius: "8px",
+                                border: "1px solid #ccc",
+                            }}
+                        />
+                    </div>
+
+                    <div>
+                        <label
+                            htmlFor="category"
+                            style={{
+                                display: "block",
+                                marginBottom: "8px",
+                                fontWeight: "bold",
+                                color: "#222",
+                            }}
+                        >
+                            Categoria
+                        </label>
+
+                        <input
+                            id="category"
+                            type="text"
+                            name="category"
+                            required
+                            style={{
+                                width: "100%",
+                                padding: "12px",
+                                borderRadius: "8px",
+                                border: "1px solid #ccc",
+                            }}
+                        />
+                    </div>
+
+                    <button
+                        type="submit"
+                        style={{
+                            backgroundColor: "#15803d",
+                            color: "white",
+                            border: "none",
+                            padding: "14px",
+                            borderRadius: "8px",
+                            cursor: "pointer",
+                            fontWeight: "bold",
+                            fontSize: "16px",
+                        }}
+                    >
+                        Publicar Produto
+                    </button>
+                </form>
+            </div>
         </main>
     );
 }
