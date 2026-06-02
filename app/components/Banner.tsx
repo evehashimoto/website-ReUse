@@ -1,110 +1,37 @@
+import Image from "next/image";
+
 export default function Banner() {
     return (
         <section
             style={{
-                background: "linear-gradient(to right, #dcfce7, #bbf7d0)",
-                padding: "80px 40px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
+                maxWidth: "1200px",
+                margin: "0 auto 60px auto",
                 borderRadius: "24px",
-                marginBottom: "50px",
-                gap: "40px",
+                overflow: "hidden",
+                boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
+                transition: "transform 0.3s ease, box-shadow 0.3s ease",
+            }}
+            onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow =
+                    "0 20px 50px rgba(0,0,0,0.15)";
+            }}
+            onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow =
+                    "0 10px 30px rgba(0,0,0,0.08)";
             }}
         >
-            {/* TEXTO */}
-            <div style={{ flex: 1 }}>
-                <h1
-                    style={{
-                        fontSize: "clamp(36px, 6vw, 52px)",
-                        color: "#166534",
-                        marginBottom: "20px",
-                        lineHeight: "1.1",
-                    }}
-                >
-                    ReUse ♻️
-                    <br />
-                    Consumo consciente para todos
-                </h1>
-
-                <p
-                    style={{
-                        fontSize: "20px",
-                        color: "#374151",
-                        marginBottom: "30px",
-                        maxWidth: "600px",
-                        lineHeight: "1.6",
-                    }}
-                >
-                    Uma plataforma colaborativa para compra, venda e reutilização de
-                    produtos usados, incentivando a sustentabilidade e reduzindo o
-                    descarte desnecessário de itens.
-                </p>
-
-                <div
-                    style={{
-                        display: "flex",
-                        gap: "16px",
-                        flexWrap: "wrap",
-                    }}
-                >
-                    <a
-                        href="#produtos"
-                        style={{
-                            backgroundColor: "#15803d",
-                            color: "white",
-                            textDecoration: "none",
-                            padding: "16px 28px",
-                            borderRadius: "12px",
-                            fontWeight: "bold",
-                        }}
-                    >
-                        Explorar Produtos
-                    </a>
-
-                    <a
-                        href="/cadastrar-produto"
-                        style={{
-                            backgroundColor: "white",
-                            color: "#15803d",
-                            textDecoration: "none",
-                            padding: "16px 28px",
-                            borderRadius: "12px",
-                            fontWeight: "bold",
-                            border: "2px solid #15803d",
-                        }}
-                    >
-                        Anunciar Produto
-                    </a>
-                </div>
-            </div>
-
-            {/* ILUSTRAÇÃO */}
-            <div
+            <Image
+                src="/banner-reuse.png"
+                alt="Banner ReUse"
+                width={1600}
+                height={500}
+                priority
                 style={{
-                    flex: 1,
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
+                    width: "100%",
+                    height: "auto",
+                    display: "block",
                 }}
-            >
-                <div
-                    style={{
-                        width: "280px",
-                        height: "280px",
-                        borderRadius: "20px",
-                        border: "3px dashed #15803d",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        color: "#166534",
-                        fontWeight: "bold",
-                        backgroundColor: "rgba(255,255,255,0.5)",
-                    }}
-                >
-                    Ilustração ReUse
-                </div>
-            </div>
+            />
         </section>
     );
 }

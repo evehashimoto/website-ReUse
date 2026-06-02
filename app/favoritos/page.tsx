@@ -14,12 +14,12 @@ const favoriteProducts = [
     },
     {
         id: 2,
-        title: "Violão Yamaha",
-        description: "Violão seminovo conservado.",
-        category: "Instrumentos",
-        price: "R$ 700",
+        title: "Mesa Gamer",
+        description: "Mesa gamer moderna para setup completo.",
+        category: "Móveis",
+        price: "R$ 450",
         image:
-            "https://images.unsplash.com/photo-1510915361894-db8b60106cb1",
+            "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6",
     },
 ];
 
@@ -31,35 +31,37 @@ export default function FavoritosPage() {
             <main
                 style={{
                     minHeight: "100vh",
-                    padding: "40px",
                     backgroundColor: "#f4f4f4",
+                    padding: "40px",
+                    fontFamily: "Arial",
                 }}
             >
                 <h1
                     style={{
-                        fontSize: "36px",
-                        marginBottom: "12px",
-                        color: "#222",
+                        color: "#166534",
+                        marginBottom: "10px",
+                        fontSize: "34px",
                     }}
                 >
-                    Meus Favoritos ❤️
+                    Favoritos
                 </h1>
 
                 <p
                     style={{
-                        marginBottom: "32px",
-                        color: "#333",
+                        color: "#4b5563",
+                        marginBottom: "30px",
+                        fontSize: "20px",
                     }}
                 >
-                    Produtos salvos para acompanhar ou comprar futuramente.
+                    Produtos salvos para consultar depois
                 </p>
 
                 <div
                     style={{
                         display: "grid",
                         gridTemplateColumns:
-                            "repeat(auto-fit, minmax(280px, 1fr))",
-                        gap: "24px",
+                            "repeat(auto-fit, minmax(250px, 1fr))",
+                        gap: "20px",
                     }}
                 >
                     {favoriteProducts.map((product) => (
@@ -74,7 +76,7 @@ export default function FavoritosPage() {
                         />
                     ))}
                 </div>
-            </main >
+            </main>
 
             <Footer />
         </>

@@ -55,6 +55,258 @@ export default function Home() {
 
         <section
           style={{
+            marginTop: "50px",
+            marginBottom: "60px",
+          }}
+        >
+          <h2
+            style={{
+              textAlign: "center",
+              color: "#166534",
+              marginBottom: "40px",
+              fontSize: "36px",
+              fontWeight: "bold",
+            }}
+          >
+            Como Funciona
+          </h2>
+          <p
+            style={{
+              textAlign: "center",
+              color: "#3c3f44",
+              marginTop: "-30px",
+              marginBottom: "40px",
+              fontSize: "20px",
+            }}
+          >
+            Três passos simples para dar uma nova vida aos produtos
+          </p>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+              gap: "24px",
+            }}
+          >
+            <div
+              style={{
+                background: "linear-gradient(135deg, #166534, #15803d)",
+                padding: "30px",
+                borderRadius: "16px",
+                textAlign: "center",
+                color: "white",
+                boxShadow: "0 15px 35px rgba(21,128,61,0.18)",
+                transition: "all 0.3s ease",
+                cursor: "pointer",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-6px)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0)";
+              }}
+            >
+              <div
+                style={{
+                  fontSize: "52px",
+                  fontWeight: "bold",
+                  opacity: "0.55",
+                  marginBottom: "20px",
+                  color: "#fff",
+                }}
+              >
+                01
+              </div>
+
+              <h3
+                style={{
+                  color: "#fff",
+                  marginBottom: "12px",
+                  fontWeight: "bold",
+                  fontSize: "24px",
+                }}
+              >
+                Anuncie
+              </h3>
+
+              <p
+                style={{
+                  color: "#fff",
+                  lineHeight: "1.6",
+                }}
+              >
+                Cadastre produtos que você não utiliza mais e encontre novos interessados.
+              </p>
+            </div>
+
+            <div
+              style={{
+                background: "linear-gradient(135deg, #166534, #15803d)",
+                padding: "30px",
+                borderRadius: "16px",
+                textAlign: "center",
+                color: "white",
+                boxShadow: "0 15px 35px rgba(21,128,61,0.18)",
+                transition: "all 0.3s ease",
+                cursor: "pointer",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-6px)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0)";
+              }}
+            >
+              <div
+                style={{
+                  fontSize: "52px",
+                  fontWeight: "bold",
+                  opacity: "0.55",
+                  marginBottom: "20px",
+                  color: "#fff",
+                }}
+              >
+                02
+              </div>
+
+              <h3
+                style={{
+                  color: "#fff",
+                  marginBottom: "12px",
+                  fontWeight: "bold",
+                  fontSize: "24px",
+                }}
+              >
+                Encontre
+              </h3>
+
+              <p
+                style={{
+                  color: "#fff",
+                  lineHeight: "1.6",
+                }}
+              >
+                Descubra produtos reutilizáveis anunciados pela comunidade.
+              </p>
+            </div>
+
+            <div
+              style={{
+                background: "linear-gradient(135deg, #166534, #15803d)",
+                padding: "30px",
+                borderRadius: "16px",
+                textAlign: "center",
+                color: "white",
+                boxShadow: "0 15px 35px rgba(21,128,61,0.18)",
+                transition: "all 0.3s ease",
+                cursor: "pointer",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-6px)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0)";
+              }}
+            >
+              <div
+                style={{
+                  fontSize: "52px",
+                  fontWeight: "bold",
+                  opacity: "0.55",
+                  marginBottom: "20px",
+                  color: "#fff",
+                }}
+              >
+                03
+              </div>
+
+              <h3
+                style={{
+                  color: "#fff",
+                  marginBottom: "12px",
+                  fontWeight: "bold",
+                  fontSize: "24px",
+                }}
+              >
+                Transforme
+              </h3>
+
+              <p
+                style={{
+                  color: "#fff",
+                  lineHeight: "1.6",
+                }}
+              >
+                Contribua para a redução de resíduos e para um consumo mais sustentável.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section
+          style={{
+            marginBottom: "60px",
+          }}
+        >
+          <div
+            style={{
+              background: "linear-gradient(to right, #15803d, #22c55e)",
+              borderRadius: "24px",
+              padding: "40px",
+              color: "white",
+            }}
+          >
+            <h2
+              style={{
+                textAlign: "center",
+                marginBottom: "40px",
+                fontSize: "36px",
+              }}
+            >
+              Impacto Sustentável
+            </h2>
+
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+                gap: "24px",
+              }}
+            >
+              <div style={{ textAlign: "center" }}>
+                <h3 style={{ fontSize: "42px", marginBottom: "10px" }}>
+                  500+
+                </h3>
+                <p>Produtos reutilizados</p>
+              </div>
+
+              <div style={{ textAlign: "center" }}>
+                <h3 style={{ fontSize: "42px", marginBottom: "10px" }}>
+                  200+
+                </h3>
+                <p>Usuários ativos</p>
+              </div>
+
+              <div style={{ textAlign: "center" }}>
+                <h3 style={{ fontSize: "42px", marginBottom: "10px" }}>
+                  1t
+                </h3>
+                <p>Resíduos evitados</p>
+              </div>
+
+              <div style={{ textAlign: "center" }}>
+                <h3 style={{ fontSize: "42px", marginBottom: "10px" }}>
+                  100%
+                </h3>
+                <p>Compromisso com sustentabilidade</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          style={{
             marginTop: "40px",
             marginBottom: "40px",
           }}

@@ -4,7 +4,7 @@ export default function Footer() {
             style={{
                 backgroundColor: "#166534",
                 color: "white",
-                padding: "50px 40px",
+                padding: "60px 40px",
                 marginTop: "60px",
             }}
         >
@@ -13,46 +13,63 @@ export default function Footer() {
                     display: "flex",
                     justifyContent: "space-between",
                     flexWrap: "wrap",
-                    gap: "30px",
+                    gap: "40px",
                 }}
             >
-                {/* LOGO */}
-                <div>
-                    <h2 style={{ marginBottom: "10px" }}>
-                        ReUse ♻️
+                {/* SOBRE */}
+                <div style={{ maxWidth: "350px" }}>
+                    <h2
+                        style={{
+                            marginBottom: "12px",
+                        }}
+                    >
+                        ReUse!
                     </h2>
 
-                    <p style={{ maxWidth: "300px", color: "#d1fae5" }}>
-                        Plataforma colaborativa voltada ao consumo consciente
-                        e reutilização sustentável de produtos.
+                    <p
+                        style={{
+                            color: "#d1fae5",
+                            lineHeight: "1.8",
+                        }}
+                    >
+                        Plataforma colaborativa para compra, venda e reutilização
+                        de produtos, incentivando o consumo consciente e a
+                        sustentabilidade urbana.
                     </p>
                 </div>
 
                 {/* LINKS */}
                 <div>
-                    <h3 style={{ marginBottom: "12px" }}>
+                    <h3
+                        style={{
+                            marginBottom: "16px",
+                        }}
+                    >
                         Navegação
                     </h3>
 
                     <p>Home</p>
-                    <p>Produtos</p>
-                    <p>Categorias</p>
-                    <p>Contato</p>
+                    <p>Favoritos</p>
+                    <p>Anunciar Produto</p>
+                    <p>Sustentabilidade</p>
                 </div>
 
                 {/* CONTATO */}
                 <div>
-                    <h3 style={{ marginBottom: "12px" }}>
+                    <h3
+                        style={{
+                            marginBottom: "16px",
+                        }}
+                    >
                         Contato
                     </h3>
 
-                    <p>reuse@email.com</p>
-                    <p>(11) 99999-9999</p>
+                    <p>contato@reuse.com.br</p>
                     <p>São Paulo - SP</p>
+                    <p>Projeto Acadêmico FIAP</p>
                 </div>
             </div>
 
-            {/* COPYRIGHT */}
             <div
                 style={{
                     marginTop: "40px",
@@ -60,9 +77,16 @@ export default function Footer() {
                     paddingTop: "20px",
                     textAlign: "center",
                     color: "#d1fae5",
+                    lineHeight: "1.8",
                 }}
             >
                 © 2026 ReUse — Todos os direitos reservados.
+                <br />
+                Promovendo a reutilização de produtos e o consumo consciente.
+                <br />
+                Evelin Júlia Hashimoto e Rebecca Martins
+                <br />
+                FIAP - Web Design - 2WTDOR
             </div>
         </footer>
     );

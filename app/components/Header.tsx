@@ -1,28 +1,45 @@
+import Image from "next/image";
+import Link from "next/link";
+
 export default function Header() {
     return (
         <header
             style={{
-                backgroundColor: "#15803d",
-                padding: "16px 40px",
+                position: "sticky",
+                top: 0,
+                zIndex: 1000,
+
+                backgroundColor: "rgba(255,255,255,0.95)",
+                backdropFilter: "blur(12px)",
+
+                boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
+
+                padding: "0 40px",
+
                 display: "flex",
-                alignItems: "center",
                 justifyContent: "space-between",
+                alignItems: "center",
                 gap: "24px",
-                flexWrap: "wrap",
             }}
         >
             {/* LOGO */}
-            <a
+            <Link
                 href="/"
                 style={{
+                    display: "flex",
+                    alignItems: "center",
                     textDecoration: "none",
-                    color: "white",
-                    fontSize: "32px",
-                    fontWeight: "bold",
+                    flexShrink: 0,
                 }}
             >
-                ♻️ ReUse
-            </a>
+                <Image
+                    src="/logo-reuse.png"
+                    alt="Logo ReUse"
+                    width={250}
+                    height={100}
+                    priority
+                />
+            </Link>
 
             {/* BUSCA */}
             <input
@@ -31,11 +48,13 @@ export default function Header() {
                 aria-label="Buscar produtos"
                 style={{
                     flex: 1,
-                    minWidth: "250px",
-                    maxWidth: "500px",
-                    padding: "12px 16px",
-                    borderRadius: "10px",
-                    border: "none",
+                    maxWidth: "450px",
+                    padding: "12px 18px",
+                    borderRadius: "12px",
+                    border: "1px solid #d1d5db",
+                    backgroundColor: "#f9fafb",
+                    color: "#111827",
+                    outline: "none",
                 }}
             />
 
@@ -43,42 +62,42 @@ export default function Header() {
             <nav
                 style={{
                     display: "flex",
-                    gap: "20px",
+                    gap: "24px",
                     alignItems: "center",
                 }}
             >
-                <a
+                <Link
                     href="/"
                     style={{
-                        color: "white",
+                        color: "#374151",
                         textDecoration: "none",
-                        fontWeight: "500",
+                        fontWeight: "600",
                     }}
                 >
                     Home
-                </a>
+                </Link>
 
-                <a
+                <Link
                     href="/sobre"
                     style={{
-                        color: "white",
+                        color: "#374151",
                         textDecoration: "none",
-                        fontWeight: "500",
+                        fontWeight: "600",
                     }}
                 >
                     Sobre
-                </a>
+                </Link>
 
-                <a
+                <Link
                     href="/favoritos"
                     style={{
-                        color: "white",
+                        color: "#374151",
                         textDecoration: "none",
-                        fontWeight: "500",
+                        fontWeight: "600",
                     }}
                 >
                     Favoritos
-                </a>
+                </Link>
             </nav>
 
             {/* AÇÕES */}
@@ -89,19 +108,20 @@ export default function Header() {
                     alignItems: "center",
                 }}
             >
-                <a
+                <Link
                     href="/cadastrar-produto"
                     style={{
-                        backgroundColor: "white",
+                        backgroundColor: "#ecfdf5",
                         color: "#15803d",
                         padding: "10px 18px",
-                        borderRadius: "8px",
+                        borderRadius: "10px",
                         textDecoration: "none",
-                        fontWeight: "bold",
+                        fontWeight: "700",
+                        border: "1px solid #bbf7d0",
                     }}
                 >
-                    + Anunciar
-                </a>
+                    Anunciar
+                </Link>
 
                 <button
                     style={{
@@ -109,12 +129,12 @@ export default function Header() {
                         color: "white",
                         border: "none",
                         padding: "10px 18px",
-                        borderRadius: "8px",
+                        borderRadius: "10px",
                         cursor: "pointer",
-                        fontWeight: "bold",
+                        fontWeight: "700",
                     }}
                 >
-                    Login
+                    Entrar
                 </button>
             </div>
         </header>

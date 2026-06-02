@@ -37,19 +37,44 @@ export default function CadastrarProduto() {
                     padding: "40px",
                     borderRadius: "16px",
                     width: "100%",
-                    maxWidth: "600px",
+                    maxWidth: "700px",
                     boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
                 }}
             >
-                <h1
+                <a
+                    href="/"
                     style={{
-                        marginBottom: "24px",
                         color: "#15803d",
-                        textAlign: "center",
+                        textDecoration: "none",
+                        fontWeight: "bold",
                     }}
                 >
-                    Anunciar Produto ♻️
+                    ← Voltar para Home
+                </a>
+
+                <h1
+                    style={{
+                        marginTop: "30px",
+                        marginBottom: "12px",
+                        color: "#15803d",
+                        textAlign: "center",
+                        fontSize: "28px",
+                        fontWeight: "",
+                    }}
+                >
+                    Anunciar Produto
                 </h1>
+
+                <p
+                    style={{
+                        textAlign: "center",
+                        color: "#555",
+                        marginBottom: "30px",
+                        fontSize: "20px",
+                    }}
+                >
+                    Compartilhe, reutilize!
+                </p>
 
                 <form
                     action={criarProduto}
@@ -57,19 +82,18 @@ export default function CadastrarProduto() {
                         display: "flex",
                         flexDirection: "column",
                         gap: "20px",
+
                     }}
                 >
                     <div>
                         <label
-                            htmlFor="title"
+                            htmlFor="price"
                             style={{
-                                display: "block",
-                                marginBottom: "8px",
-                                fontWeight: "bold",
                                 color: "#222",
+                                fontWeight: "bold",
                             }}
                         >
-                            Título do Produto
+                            Título do Produto:
                         </label>
 
                         <input
@@ -77,53 +101,28 @@ export default function CadastrarProduto() {
                             type="text"
                             name="title"
                             required
+                            placeholder="Por exemplo: Notebook Dell Inspiron"
                             style={{
                                 width: "100%",
                                 padding: "12px",
                                 borderRadius: "8px",
                                 border: "1px solid #ccc",
+                                marginTop: "8px",
+                                color: "#222",
+                                backgroundColor: "#fff",
                             }}
                         />
                     </div>
 
                     <div>
                         <label
-                            htmlFor="description"
+                            htmlFor="price"
                             style={{
-                                display: "block",
-                                marginBottom: "8px",
-                                fontWeight: "bold",
                                 color: "#222",
+                                fontWeight: "bold",
                             }}
                         >
-                            Descrição
-                        </label>
-
-                        <textarea
-                            id="description"
-                            name="description"
-                            required
-                            rows={5}
-                            style={{
-                                width: "100%",
-                                padding: "12px",
-                                borderRadius: "8px",
-                                border: "1px solid #ccc",
-                            }}
-                        />
-                    </div>
-
-                    <div>
-                        <label
-                            htmlFor="category"
-                            style={{
-                                display: "block",
-                                marginBottom: "8px",
-                                fontWeight: "bold",
-                                color: "#222",
-                            }}
-                        >
-                            Categoria
+                            Categoria:
                         </label>
 
                         <input
@@ -131,11 +130,124 @@ export default function CadastrarProduto() {
                             type="text"
                             name="category"
                             required
+                            placeholder="Tecnologia"
                             style={{
                                 width: "100%",
                                 padding: "12px",
                                 borderRadius: "8px",
                                 border: "1px solid #ccc",
+                                marginTop: "8px",
+                                color: "#222",
+                                backgroundColor: "#fff",
+                            }}
+                        />
+                    </div>
+
+                    <div>
+                        <label
+                            htmlFor="price"
+                            style={{
+                                color: "#222",
+                                fontWeight: "bold",
+                            }}
+                        >
+                            Preço:
+                        </label>
+
+                        <input
+                            id="price"
+                            type="text"
+                            placeholder="R$ 0,00"
+                            style={{
+                                width: "100%",
+                                padding: "12px",
+                                borderRadius: "8px",
+                                border: "1px solid #ccc",
+                                marginTop: "8px",
+                                color: "#222",
+                                backgroundColor: "#fff",
+                            }}
+                        />
+                    </div>
+
+                    <div>
+                        <label
+                            htmlFor="price"
+                            style={{
+                                color: "#222",
+                                fontWeight: "bold",
+                            }}
+                        >
+                            Localização:
+                        </label>
+
+                        <input
+                            id="location"
+                            type="text"
+                            placeholder="São Paulo - SP"
+                            style={{
+                                width: "100%",
+                                padding: "12px",
+                                borderRadius: "8px",
+                                border: "1px solid #ccc",
+                                marginTop: "8px",
+                                color: "#222",
+                                backgroundColor: "#fff",
+                            }}
+                        />
+                    </div>
+
+                    <div>
+                        <label
+                            htmlFor="price"
+                            style={{
+                                color: "#222",
+                                fontWeight: "bold",
+                            }}
+                        >
+                            Imagem do Produto:
+                        </label>
+
+                        <input
+                            id="image"
+                            type="file"
+                            style={{
+                                width: "100%",
+                                padding: "12px",
+                                borderRadius: "8px",
+                                border: "1px solid #ccc",
+                                marginTop: "8px",
+                                color: "#222",
+                                backgroundColor: "#fff",
+                            }}
+                        />
+                    </div>
+
+                    <div>
+                        <label
+                            htmlFor="price"
+                            style={{
+                                color: "#222",
+                                fontWeight: "bold",
+                            }}
+                        >
+                            Descrição:
+                        </label>
+
+                        <textarea
+                            id="description"
+                            name="description"
+                            required
+                            rows={6}
+                            placeholder="Descreva o estado do produto, tempo de uso e demais informações relevantes."
+                            style={{
+                                width: "100%",
+                                padding: "12px",
+                                borderRadius: "8px",
+                                border: "1px solid #ccc",
+                                marginTop: "8px",
+                                color: "#222",
+                                backgroundColor: "#fff",
                             }}
                         />
                     </div>
@@ -146,8 +258,8 @@ export default function CadastrarProduto() {
                             backgroundColor: "#15803d",
                             color: "white",
                             border: "none",
-                            padding: "14px",
-                            borderRadius: "8px",
+                            padding: "16px",
+                            borderRadius: "10px",
                             cursor: "pointer",
                             fontWeight: "bold",
                             fontSize: "16px",
