@@ -18,16 +18,34 @@ export default function SobrePage() {
                     style={{
                         maxWidth: "1000px",
                         margin: "0 auto",
+                        backgroundColor: "white",
+                        padding: "50px",
+                        borderRadius: "24px",
+                        boxShadow: "0 10px 35px rgba(22, 101, 52, 0.15)",
+                        border: "1px solid rgba(21, 128, 61, 0.1)",
                     }}
                 >
                     <h1
                         style={{
                             fontSize: "42px",
                             marginBottom: "24px",
+                            color: "#166534",
+                            fontWeight: "bold",
                         }}
                     >
-                        Sobre a ReUse ♻️
+                        Sobre a ReUse!
                     </h1>
+
+                    <div
+                        style={{
+                            width: "120px",
+                            height: "5px",
+                            background: "linear-gradient(90deg, #166534, #22c55e)",
+                            borderRadius: "999px",
+                            marginBottom: "30px",
+                            boxShadow: "0 0 15px rgba(34, 197, 94, 0.4)",
+                        }}
+                    />
 
                     <p
                         style={{
@@ -74,7 +92,7 @@ export default function SobrePage() {
                     >
                         Desenvolvido por Evelin Julia Hashimoto e Rebecca Martins, FIAP 2026 - Turma 2TWDOR
                     </p>
-                    
+
                 </section>
             </main>
 
