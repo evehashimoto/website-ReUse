@@ -68,7 +68,7 @@ export default function Home() {
               fontWeight: "bold",
             }}
           >
-            Como Funciona
+            Como Funciona?
           </h2>
           <p
             style={{
@@ -77,6 +77,7 @@ export default function Home() {
               marginTop: "-30px",
               marginBottom: "40px",
               fontSize: "20px",
+              fontWeight: "bold",
             }}
           >
             Três passos simples para dar uma nova vida aos produtos
@@ -90,6 +91,7 @@ export default function Home() {
             }}
           >
             <div
+              tabIndex={0}
               style={{
                 background: "linear-gradient(135deg, #166534, #15803d)",
                 padding: "30px",
@@ -99,12 +101,23 @@ export default function Home() {
                 boxShadow: "0 15px 35px rgba(21,128,61,0.18)",
                 transition: "all 0.3s ease",
                 cursor: "pointer",
+                outline: "none",
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = "translateY(-6px)";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = "translateY(0)";
+              }}
+              onFocus={(e) => {
+                e.currentTarget.style.transform = "translateY(-6px)";
+                e.currentTarget.style.boxShadow =
+                  "0 0 0 4px #0f0f0f, 0 15px 35px rgba(21,128,61,0.18)";
+              }}
+              onBlur={(e) => {
+                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.boxShadow =
+                  "0 15px 35px rgba(21,128,61,0.18)";
               }}
             >
               <div
@@ -136,11 +149,12 @@ export default function Home() {
                   lineHeight: "1.6",
                 }}
               >
-                Cadastre produtos que você não utiliza mais e encontre novos interessados.
+                Cadastre produtos que você não utiliza mais e encontre novos interessados
               </p>
             </div>
 
             <div
+              tabIndex={0}
               style={{
                 background: "linear-gradient(135deg, #166534, #15803d)",
                 padding: "30px",
@@ -150,12 +164,23 @@ export default function Home() {
                 boxShadow: "0 15px 35px rgba(21,128,61,0.18)",
                 transition: "all 0.3s ease",
                 cursor: "pointer",
+                outline: "none",
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = "translateY(-6px)";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = "translateY(0)";
+              }}
+              onFocus={(e) => {
+                e.currentTarget.style.transform = "translateY(-6px)";
+                e.currentTarget.style.boxShadow =
+                  "0 0 0 4px #0f0f0f, 0 15px 35px rgba(21,128,61,0.18)";
+              }}
+              onBlur={(e) => {
+                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.boxShadow =
+                  "0 15px 35px rgba(21,128,61,0.18)";
               }}
             >
               <div
@@ -187,11 +212,12 @@ export default function Home() {
                   lineHeight: "1.6",
                 }}
               >
-                Descubra produtos reutilizáveis anunciados pela comunidade.
+                Descubra produtos reutilizáveis anunciados pela comunidade ReUse
               </p>
             </div>
 
             <div
+              tabIndex={0}
               style={{
                 background: "linear-gradient(135deg, #166534, #15803d)",
                 padding: "30px",
@@ -201,12 +227,23 @@ export default function Home() {
                 boxShadow: "0 15px 35px rgba(21,128,61,0.18)",
                 transition: "all 0.3s ease",
                 cursor: "pointer",
+                outline: "none",
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = "translateY(-6px)";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = "translateY(0)";
+              }}
+              onFocus={(e) => {
+                e.currentTarget.style.transform = "translateY(-6px)";
+                e.currentTarget.style.boxShadow =
+                  "0 0 0 4px #0f0f0f, 0 15px 35px rgba(21,128,61,0.18)";
+              }}
+              onBlur={(e) => {
+                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.boxShadow =
+                  "0 15px 35px rgba(21,128,61,0.18)";
               }}
             >
               <div
@@ -238,7 +275,7 @@ export default function Home() {
                   lineHeight: "1.6",
                 }}
               >
-                Contribua para a redução de resíduos e para um consumo mais sustentável.
+                Contribua para a redução de resíduos e para um consumo mais sustentável
               </p>
             </div>
           </div>
@@ -246,61 +283,121 @@ export default function Home() {
 
         <section
           style={{
-            marginBottom: "60px",
+            marginBottom: "80px",
+            marginTop: "20px",
           }}
         >
           <div
             style={{
-              background: "linear-gradient(to right, #15803d, #22c55e)",
-              borderRadius: "24px",
-              padding: "40px",
-              color: "white",
+              textAlign: "center",
+              marginBottom: "50px",
             }}
           >
             <h2
               style={{
-                textAlign: "center",
-                marginBottom: "40px",
+                color: "#166534",
                 fontSize: "36px",
+                marginBottom: "12px",
+                fontWeight: "bold",
               }}
             >
               Impacto Sustentável
             </h2>
 
+            <p
+              style={{
+                color: "#6b7280",
+                fontSize: "18px",
+              }}
+            >
+              Resultados gerados pela comunidade ReUse através da reutilização consciente!
+            </p>
+          </div>
+
+          <div
+            style={{
+              backgroundColor: "white",
+              borderRadius: "24px",
+              padding: "50px 30px",
+              boxShadow: "0 6px 20px rgba(0, 0, 0, 0.21)",
+            }}
+          >
             <div
               style={{
                 display: "grid",
                 gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-                gap: "24px",
+                gap: "20px",
               }}
             >
-              <div style={{ textAlign: "center" }}>
-                <h3 style={{ fontSize: "42px", marginBottom: "10px" }}>
-                  500+
-                </h3>
-                <p>Produtos reutilizados</p>
-              </div>
+              {[
+                {
+                  numero: "500+",
+                  titulo: "Produtos reutilizados",
+                },
+                {
+                  numero: "200+",
+                  titulo: "Usuários ativos",
+                },
+                {
+                  numero: "1t",
+                  titulo: "Resíduos evitados",
+                },
+                {
+                  numero: "100%",
+                  titulo: "Compromisso sustentável",
+                },
+              ].map((item) => (
+                <div
+                  key={item.titulo}
+                  tabIndex={0}
+                  style={{
+                    position: "relative",
+                    backgroundColor: "white",
+                    borderRadius: "18px",
+                    overflow: "hidden",
+                    boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
+                    cursor: "pointer",
+                    transition: "all 0.3s ease",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "translateY(-4px)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "translateY(0)";
+                  }}
+                  onFocus={(e) => {
+                    e.currentTarget.style.transform = "translateY(-4px)";
+                    e.currentTarget.style.boxShadow =
+                      "0 0 0 3px #166534";
+                  }}
+                  onBlur={(e) => {
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow = "none";
+                  }}
+                >
+                  <h3
+                    style={{
+                      fontSize: "64px",
+                      fontWeight: "700",
+                      color: "#15803d",
+                      marginBottom: "12px",
+                      lineHeight: "1",
+                    }}
+                  >
+                    {item.numero}
+                  </h3>
 
-              <div style={{ textAlign: "center" }}>
-                <h3 style={{ fontSize: "42px", marginBottom: "10px" }}>
-                  200+
-                </h3>
-                <p>Usuários ativos</p>
-              </div>
-
-              <div style={{ textAlign: "center" }}>
-                <h3 style={{ fontSize: "42px", marginBottom: "10px" }}>
-                  1t
-                </h3>
-                <p>Resíduos evitados</p>
-              </div>
-
-              <div style={{ textAlign: "center" }}>
-                <h3 style={{ fontSize: "42px", marginBottom: "10px" }}>
-                  100%
-                </h3>
-                <p>Compromisso com sustentabilidade</p>
-              </div>
+                  <p
+                    style={{
+                      color: "#4b5563",
+                      fontSize: "17px",
+                      fontWeight: "500",
+                    }}
+                  >
+                    {item.titulo}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -313,11 +410,13 @@ export default function Home() {
         >
           <h2
             style={{
-              marginBottom: "20px",
-              color: "#222",
+              color: "#166534",
+              fontSize: "36px",
+              marginBottom: "30px",
+              fontWeight: "bold",
             }}
           >
-            Categorias Populares
+            Categorias populares
           </h2>
 
           <div
@@ -336,13 +435,36 @@ export default function Home() {
             ].map((categoria) => (
               <div
                 key={categoria}
+                tabIndex={0}
                 style={{
                   backgroundColor: "white",
-                  padding: "16px 24px",
-                  borderRadius: "12px",
-                  boxShadow: "0 2px 6px rgba(0,0,0,0.08)",
-                  fontWeight: "bold",
-                  color: "#222",
+                  padding: "18px 28px",
+                  borderRadius: "999px",
+                  border: "2px solid #166534",
+                  color: "#166534",
+                  fontWeight: "600",
+                  fontSize: "16px",
+                  cursor: "pointer",
+                  transition: "all 0.3s ease",
+                  boxShadow: "0 4px 12px rgba(0,0,0,0.04)",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = "#15803d";
+                  e.currentTarget.style.color = "white";
+                  e.currentTarget.style.transform = "translateY(-2px)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = "white";
+                  e.currentTarget.style.color = "#166534";
+                  e.currentTarget.style.transform = "translateY(0)";
+                }}
+                onFocus={(e) => {
+                  e.currentTarget.style.backgroundColor = "#15803d";
+                  e.currentTarget.style.color = "white";
+                }}
+                onBlur={(e) => {
+                  e.currentTarget.style.backgroundColor = "white";
+                  e.currentTarget.style.color = "#166534";
                 }}
               >
                 {categoria}
@@ -350,16 +472,6 @@ export default function Home() {
             ))}
           </div>
         </section>
-
-        <h2
-          style={{
-            marginBottom: "20px",
-            color: "#222",
-            marginTop: "20px",
-          }}
-        >
-          Produtos em Destaque
-        </h2>
 
         <div
           style={{
@@ -383,41 +495,57 @@ export default function Home() {
 
         <section
           style={{
-            marginTop: "60px",
+            marginTop: "80px",
           }}
         >
           <h2
             style={{
-              marginBottom: "20px",
-              color: "#222",
+              color: "#166534",
+              fontSize: "36px",
+              marginBottom: "30px",
+              fontWeight: "bold",
             }}
           >
-            Recém Adicionados
+            Recém adicionados
           </h2>
 
           <div
             style={{
-              backgroundColor: "white",
-              padding: "24px",
-              borderRadius: "12px",
-              boxShadow: "0 2px 6px rgba(0,0,0,0.08)",
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+              gap: "20px",
             }}
           >
-            <p
-              style={{
-                color: "#444",
-                margin: 0,
-                lineHeight: "1.6",
-              }}
-            >
-              Novos produtos são adicionados diariamente pela comunidade ReUse.
-              Explore oportunidades de compra consciente e contribua para uma
-              economia mais sustentável.
-            </p>
+            <ProductCard
+              id={101}
+              title="Cama de Casal"
+              description="Estrutura em madeira maciça em excelente estado."
+              category="Móveis"
+              price="R$ 2.800"
+              image="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop"
+            />
+
+            <ProductCard
+              id={102}
+              title="Bicicleta Urbana"
+              description="Ideal para deslocamentos diários e lazer."
+              category="Esportes"
+              price="R$ 950"
+              image="https://images.unsplash.com/photo-1541625602330-2277a4c46182?q=80&w=1200&auto=format&fit=crop"
+            />
+
+            <ProductCard
+              id={103}
+              title="Coleção de Livros"
+              description="Mais de 30 títulos em excelente conservação."
+              category="Livros"
+              price="R$ 120"
+              image="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1200&auto=format&fit=crop"
+            />
           </div>
         </section>
       </main>
-      <Footer />
+      <Footer /> 
     </>
   );
 }

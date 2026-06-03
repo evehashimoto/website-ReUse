@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 
 interface ProductCardProps {
@@ -24,30 +26,50 @@ export default function ProductCard({
                 backgroundColor: "white",
                 borderRadius: "18px",
                 overflow: "hidden",
-                boxShadow: "0 8px 24px rgba(0,0,0,0.12)",
+                boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
                 transition: "0.3s",
                 cursor: "pointer",
             }}
         >
-            {/* FAVORITO */}
-            <div
+            {/* {/* FAVORITO */}
+            <button
+                aria-label="Adicionar aos favoritos"
                 style={{
                     position: "absolute",
                     top: "12px",
                     right: "12px",
                     backgroundColor: "white",
                     borderRadius: "50%",
-                    width: "40px",
-                    height: "40px",
+                    width: "44px",
+                    height: "44px",
+                    border: "none",
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
                     boxShadow: "0 2px 6px rgba(0,0,0,0.15)",
-                    zIndex: 1,
+                    cursor: "pointer",
+                    fontSize: "20px",
+                    transition: "all 0.2s ease",
+                }}
+                onMouseEnter={(e) => {
+                    e.currentTarget.innerHTML = "♥";
+                }}
+                onMouseLeave={(e) => {
+                    e.currentTarget.innerHTML = "♡";
+                }}
+                onFocus={(e) => {
+                    e.currentTarget.innerHTML = "♥";
+                    e.currentTarget.style.boxShadow =
+                        "0 0 0 3px #166354";
+                }}
+                onBlur={(e) => {
+                    e.currentTarget.innerHTML = "♡";
+                    e.currentTarget.style.boxShadow =
+                        "0 2px 6px rgba(0,0,0,0.15)";
                 }}
             >
-                🤍
-            </div>
+                ♡
+            </button>
 
             {/* IMAGEM */}
             <img
